@@ -14,6 +14,7 @@ const StyledHeroSection = styled.section`
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
+    padding-top: var(--nav-height);
   }
 
   h1 {
@@ -41,7 +42,7 @@ const StyledHeroSection = styled.section`
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 45px;
   }
 `;
 

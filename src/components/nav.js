@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 11;
-  padding: 0px 50px;
+  padding: 50px;
   width: 100%;
   height: var(--nav-height);
   filter: none !important;
