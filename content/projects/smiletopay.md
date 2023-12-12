@@ -4,7 +4,6 @@ title: 'Smile To Pay App'
 company: 'Me12Pay Digital Sdn. Bhd.'
 tech:
   - Java
-  - MySQL
   - Firebase
   - Android Studio
   - Figma

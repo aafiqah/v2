@@ -8,7 +8,6 @@ cta: 'https://youtube.com/shorts/mvzK-22mIq4?feature=share'
 figma: ''
 tech:
   - Java
-  - MySQL
   - Firebase
   - Android Studio
   - Figma

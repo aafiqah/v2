@@ -4,7 +4,6 @@ title: 'The HUB App'
 figma: ''
 tech:
   - Java
-  - MySQL
   - Firebase
   - Android Studio
   - Figma

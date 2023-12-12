@@ -5,7 +5,6 @@ cover: './demo.png'
 github: 'https://github.com/aafiqah/class_attendance'
 tech:
   - Java
-  - MySQL
   - NetBeans
   - phpMyAdmin
 ---
