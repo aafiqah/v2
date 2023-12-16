@@ -17,6 +17,8 @@ import {
   IconTwitter,
   IconFigma,
   IconApk,
+  IconExe,
+  IconYoutube,
 } from '@components/icons';
 
 const Icon = ({ name }) => {
@@ -53,6 +55,10 @@ const Icon = ({ name }) => {
       return <IconFigma />;
     case 'Apk':
       return <IconApk />;
+    case 'Exe':
+      return <IconExe />;
+    case 'Youtube':
+      return <IconYoutube />;
     default:
       return <IconExternal />;
   }

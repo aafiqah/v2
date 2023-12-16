@@ -1,6 +1,9 @@
 ---
-date: '3'
-title: 'Class Attendance Using Face Recognition System'
+date: '2019-09-01'
+fulltitle: 'Class Attendance Using Face Recognition System'
+title: 'Face Recognition System'
+slug: 'face-recognition-system'
+category: 'Desktop App Development'
 cover: './demo.png'
 github: 'https://github.com/aafiqah/class_attendance'
 tech:

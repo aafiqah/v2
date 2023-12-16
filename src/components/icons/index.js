@@ -16,3 +16,5 @@ export { default as IconStar } from './star';
 export { default as IconTwitter } from './twitter';
 export { default as IconFigma } from './figma';
 export { default as IconApk } from './apk';
+export { default as IconExe } from './exe';
+export { default as IconYoutube } from './youtube';

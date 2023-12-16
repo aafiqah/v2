@@ -38,6 +38,7 @@ const StyledHeroSection = styled.section`
   p {
     margin: 20px 0 0;
     max-width: 540px;
+    text-align: justify;
   }
 
   .email-link {
@@ -65,9 +66,9 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        Aspiring mobile and software development with a background in computer forensics. Eager to
-        apply analytical skills to software development, learn continuously, and contribute to
-        innovative projects.
+        Aspiring software development with a background in computer forensics. Eager to apply
+        analytical skills to software development, learn continuously, and contribute to innovative
+        projects.
       </p>
     </>
   );

@@ -34,7 +34,7 @@ const StyledTagsContainer = styled.main`
         }
       }
       .subtitle {
-        color: var(--light-slate);
+        color: var(--slate);
         font-size: var(--fz-sm);
 
         .tag {
@@ -124,7 +124,7 @@ TagTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
