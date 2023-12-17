@@ -353,44 +353,8 @@ const StyledModalHeader = styled.header`
 
       li {
         margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
+        color: var(--green);
       }
-    }
-  }
-  
-  .modal-links {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px;
-    color: var(--lightest-slate);
-    justify-content: center;
-
-    @media (max-width: 900px) {
-      justify-content: center;
-      margin: 10px;
-    }
-
-    a {
-      ${({ theme }) => theme.mixins.flexCenter};
-      padding: 25px;
-      &.external {
-        svg {
-          width: 32px;
-          height: 32px;
-          margin: -4px;
-        }
-      }
-      svg {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
-    span {
-      margin-top: 5px;
-      margin-left: 5px;
-      font-size: var(--fz-xs);
     }
   }
 `;
@@ -430,6 +394,49 @@ const StyledModalContent = styled.div`
   pre code {
     background-color: transparent;
     padding: 0;
+  }
+`;
+
+const StyledModalFooter = styled.footer`
+  .modal-tech-title {
+    margin: 2em 0 1em;
+    text-align: center;
+  }
+
+  .modal-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    color: var(--lightest-slate);
+    justify-content: center;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      margin: 10px;
+    }
+
+    a {
+      ${({ theme }) => theme.mixins.flexCenter};
+      padding: 25px;
+      &.external {
+        svg {
+          width: 32px;
+          height: 32px;
+          margin: -4px;
+        }
+      }
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    span {
+      margin-top: 5px;
+      margin-left: 5px;
+      font-size: var(--fz-xs);
+    }
   }
 `;
 
@@ -488,7 +495,7 @@ const Featured = () => {
 
   const truncateDescription = (text, maxLength) => {
     if (text.length > maxLength) {
-      return `${text.substring(0, maxLength - 3)  }...`; // Append '...' if truncated
+      return `${text.substring(0, maxLength - 3)}...`; // Append '...' if truncated
     }
     return text;
   };
@@ -650,6 +657,18 @@ const Featured = () => {
                 </a>
               </div>
 
+              <ul className="modal-tech-list">
+                <p className="modal-tech-title">Technologies:</p>
+                {modalData.tech.map((tech, i) => (
+                  <li key={i}> {tech}</li>
+                ))}
+              </ul>
+            </StyledModalHeader>
+
+            <StyledModalContent dangerouslySetInnerHTML={{ __html: modalData.html }} />
+
+            <StyledModalFooter>
+              <h1 className="modal-tech-title">Project Links</h1>
               <div className="modal-links">
                 {modalData.frontmatter.github && (
                   <a href={modalData.frontmatter.github} aria-label="GitHub Link">
@@ -676,16 +695,7 @@ const Featured = () => {
                   </a>
                 )}
               </div>
-
-              <ul className="modal-tech-list">
-                <p className="modal-tech-title">Technologies:</p>
-                {modalData.tech.map((tech, i) => (
-                  <li key={i}> {tech}</li>
-                ))}
-              </ul>
-            </StyledModalHeader>
-
-            <StyledModalContent dangerouslySetInnerHTML={{ __html: modalData.html }} />
+            </StyledModalFooter>
           </StyledModalContainer>
         </Modal>
       )}

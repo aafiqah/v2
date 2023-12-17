@@ -13,37 +13,81 @@ const StyledBackdrop = styled.div`
   backdrop-filter: blur(5px); /* Apply the blur effect */
 `;
 
-const StyledModal = styled.div`
+const StyledContainer = styled.div`
   position: fixed;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1000;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    overflow-y: auto;
+  }
+`;
+
+const StyledNav = styled.div`
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1001;
+    width: 90%;
+    top: 0.4%;
+    background-color: var(--darkpurple);
+    padding: 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      z-index: 1001;
+      width: 96%;
+      top: 0.4%;
+      background-color: var(--darkpurple);
+      padding: 10px;
+    }
+  }
+  .close-button {
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--green);
+    ${({ theme }) => theme.mixins.smallButton};
+  }
+`;
+
+const StyledModal = styled.div`
+  position: fixed;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: var(--darkpurple);
   z-index: 1000;
   border-radius: 10px;
-  border: 2px solid var(--green);
-  max-height: 86vh;
+  max-height: 90vh;
   overflow-y: auto;
-  width: 90%;
 
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    padding-top: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    color: var(--green);
+  @media (max-width: 768px) {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   .breadcrumb {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -61,14 +105,19 @@ const Modal = ({ onClose, children }) => {
   return (
     <>
       <StyledBackdrop />
-      <StyledModal>
-        <div className="breadcrumb">
-          <button className="close-button" onClick={onClose}>
-            Close X
-          </button>
-        </div>
-        {children}
-      </StyledModal>
+      <StyledContainer>
+        <StyledNav>
+          <div className="navbar">
+            <p></p>
+            <button className="close-button" onClick={onClose}>
+              Close X
+            </button>
+          </div>
+        </StyledNav>
+        <StyledModal>
+          <div className="breadcrumb">{children}</div>
+        </StyledModal>
+      </StyledContainer>
     </>
   );
 };

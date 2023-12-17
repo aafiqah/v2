@@ -18,8 +18,6 @@ tech:
 
 Medicine Halal or known as Advanced Medicine Halal Verification is a cross-platform Android application that allows users to easily detect halal medicine, access registration status, and report any issues, fostering a safer and more transparent healthcare environment. This app was created solo in 9 months for a Bachelor final year project (fyp).
 
-![Medicine Halal App Logo](./medicine-halal-1.jpg)
-
 ![How it work](./medicine-halal-2.jpg)
 
 # Medicine Halal App Demo Video
