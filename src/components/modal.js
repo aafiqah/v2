@@ -27,7 +27,8 @@ const StyledContainer = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     max-width: none;
   }
 `;
@@ -48,9 +49,14 @@ const StyledNav = styled.div`
 
   p {
     font-size: 1.25rem;
-    color: var(--light-slate);
+    color: var(--green);
     margin-right: 20px;
     font-family: var(--font-mono);
+
+    @media (max-width: 768px) {
+      padding: 15px;
+      font-size: var(--fz-lg);
+    }
   }
 
   .close-button {

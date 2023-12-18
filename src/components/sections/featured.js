@@ -288,9 +288,17 @@ const StyledModalContainer = styled.main`
 `;
 
 const StyledModalHeader = styled.header`
-  margin-bottom: 50px;
+  margin-bottom: 1em;
 
-  .modal-subtitle{
+  h1 {
+    font-family: var(--font-mono);
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-lg);
+    }
+  }
+
+  .modal-subtitle {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -300,6 +308,10 @@ const StyledModalHeader = styled.header`
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-xs);
+    }
   }
 
   .modal-image {
@@ -313,6 +325,10 @@ const StyledModalHeader = styled.header`
       max-width: 100%;
       max-height: 100%;
     }
+
+    @media (max-width: 768px) {
+      margin: 15px 0 0;
+    }
   }
 
   .modal-tech-title {
@@ -323,14 +339,9 @@ const StyledModalHeader = styled.header`
     white-space: nowrap;
     justify-content: center;
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       margin: 0 10px 5px 0;
-      color: var(--lightest-slate);
-      }
-    }
-
-    h1{
-      font-family: var(--font-mono);
+      font-size: var(--fz-md);
     }
   }
 
@@ -352,12 +363,13 @@ const StyledModalHeader = styled.header`
       white-space: nowrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       margin: 10px 0;
 
       li {
         margin: 0 10px 5px 0;
         color: var(--green);
+        font-size: var(--fz-md);
       }
     }
   }
@@ -376,12 +388,20 @@ const StyledModalContent = styled.div`
     margin: 2em 0 1em;
     text-align: center;
     font-family: var(--font-mono);
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-xxl);
+    }
   }
 
   p {
-    margin: 1em 0;
+    margin-bottom: 1em;
     line-height: 1.5;
     color: var(--light-slate);
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-lg);
+    }
   }
 
   a {
@@ -400,6 +420,22 @@ const StyledModalContent = styled.div`
     background-color: transparent;
     padding: 0;
   }
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
 `;
 
 const StyledModalFooter = styled.footer`
@@ -407,6 +443,10 @@ const StyledModalFooter = styled.footer`
     margin: 2em 0 1em;
     text-align: center;
     font-family: var(--font-mono);
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-xxl);
+    }
   }
 
   .modal-links {
@@ -418,14 +458,14 @@ const StyledModalFooter = styled.footer`
     justify-content: center;
     font-family: var(--font-mono);
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       justify-content: center;
       margin: 10px;
     }
 
     a {
-      ${({ theme }) => theme.mixins.flexCenter};
       padding: 25px;
+
       &.external {
         svg {
           width: 32px;
@@ -667,7 +707,7 @@ const Featured = () => {
               <ul className="modal-tech-list">
                 <p className="modal-tech-title">Technologies:</p>
                 {modalData.tech.map((tech, i) => (
-                  <li key={i}> {tech}</li>
+                  <li key={i}>{tech}</li>
                 ))}
               </ul>
             </StyledModalHeader>
@@ -676,6 +716,7 @@ const Featured = () => {
 
             <StyledModalFooter>
               <h1 className="modal-tech-title">Project Links</h1>
+
               <div className="modal-links">
                 {modalData.frontmatter.github && (
                   <a href={modalData.frontmatter.github} aria-label="GitHub Link">
