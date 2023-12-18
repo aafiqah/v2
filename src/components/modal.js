@@ -19,8 +19,8 @@ const StyledContainer = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1002;
-  width: 80%;
-  height: 90%;
+  width: 90%;
+  height: 95%;
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--darkpurple);
