@@ -58,11 +58,6 @@ const StyledPic = styled.div`
     width: 60%;
   }
 
-  @media (max-width: 425px) {
-    margin: 30px auto;
-    width: 40%;
-  }
-
   .wrapper {
     display: block;
     position: relative;
@@ -103,7 +98,11 @@ const StyledSkill = styled.div`
     flex-wrap: wrap;
 
     @media (max-width: 768px) {
-      padding: 1rem;
+      padding: 2px;
+    }
+
+    @media (max-width: 425px) {
+      padding: 2px;
     }
   }
 
@@ -115,9 +114,23 @@ const StyledSkill = styled.div`
     border-radius: 8px;
     padding: 10px;
 
+    @media (max-width: 425px) {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      padding: 5px;
+      justify-content: center;
+    }
+
     .badge-image {
       width: 100%;
       height: auto;
+
+      @media (max-width: 425px) {
+        width: 85%;
+        height: auto;
+      }
     }
   }
 `;
