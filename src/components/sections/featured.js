@@ -328,6 +328,10 @@ const StyledModalHeader = styled.header`
       color: var(--lightest-slate);
       }
     }
+
+    h1{
+      font-family: var(--font-mono);
+    }
   }
 
   .modal-tech-list {
@@ -371,6 +375,7 @@ const StyledModalContent = styled.div`
   h6 {
     margin: 2em 0 1em;
     text-align: center;
+    font-family: var(--font-mono);
   }
 
   p {
@@ -401,6 +406,7 @@ const StyledModalFooter = styled.footer`
   .modal-tech-title {
     margin: 2em 0 1em;
     text-align: center;
+    font-family: var(--font-mono);
   }
 
   .modal-links {
@@ -410,6 +416,7 @@ const StyledModalFooter = styled.footer`
     margin: 10px;
     color: var(--lightest-slate);
     justify-content: center;
+    font-family: var(--font-mono);
 
     @media (max-width: 900px) {
       justify-content: center;

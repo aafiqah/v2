@@ -8,9 +8,9 @@ const StyledBackdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  z-index: 999; /* Ensure the backdrop is behind the modal */
-  backdrop-filter: blur(5px); /* Apply the blur effect */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(5px);
 `;
 
 const StyledContainer = styled.div`
@@ -18,15 +18,17 @@ const StyledContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  z-index: 1000;
+  z-index: 1002;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--darkpurple);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    overflow-y: auto;
+    width: 90%;
+    max-width: none;
   }
 `;
 
@@ -34,60 +36,43 @@ const StyledNav = styled.div`
   .navbar {
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    z-index: 1001;
-    width: 90%;
-    top: 0.4%;
-    background-color: var(--darkpurple);
+    align-items: center;
     padding: 20px;
+    background-color: var(--darkpurple);
+    border-bottom: 2px solid var(--green);
 
     @media (max-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      position: fixed;
-      z-index: 1001;
-      width: 96%;
-      top: 0.4%;
-      background-color: var(--darkpurple);
-      padding: 10px;
+      padding: 15px;
     }
   }
+
+  p {
+    font-size: 1.25rem;
+    color: var(--light-slate);
+    margin-right: 20px;
+    font-family: var(--font-mono);
+  }
+
   .close-button {
-    top: 10px;
-    right: 10px;
     cursor: pointer;
     font-size: 16px;
     color: var(--green);
+    background: none;
+    border: none;
     ${({ theme }) => theme.mixins.smallButton};
   }
 `;
 
 const StyledModal = styled.div`
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: var(--darkpurple);
-  z-index: 1000;
-  border-radius: 10px;
+  padding: 10px;
   max-height: 90vh;
   overflow-y: auto;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-
   .breadcrumb {
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -108,9 +93,9 @@ const Modal = ({ onClose, children }) => {
       <StyledContainer>
         <StyledNav>
           <div className="navbar">
-            <p></p>
+            <p>View Project</p>
             <button className="close-button" onClick={onClose}>
-              Close X
+              X
             </button>
           </div>
         </StyledNav>
