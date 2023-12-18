@@ -12,7 +12,7 @@ const StyledHeroSection = styled.section`
   height: 100vh;
   padding: 0;
 
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+  @media (max-height: 768px) {
     height: auto;
     padding-top: var(--nav-height);
   }
@@ -24,7 +24,7 @@ const StyledHeroSection = styled.section`
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
 
-    @media (max-width: 480px) {
+    @media (max-width: 7680px) {
       margin: 0 0 20px 2px;
     }
   }

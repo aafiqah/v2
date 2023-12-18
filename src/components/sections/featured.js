@@ -24,7 +24,7 @@ const StyledProject = styled.li`
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.boxShadow};
     background-color: var(--lightpurple);
     display: flex;
@@ -37,7 +37,7 @@ const StyledProject = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 70px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       margin-bottom: 40px;
     }
   }
@@ -50,7 +50,7 @@ const StyledProject = styled.li`
       @media (max-width: 1080px) {
         grid-column: 5 / -1;
       }
-      @media (max-width: 900px) {
+      @media (max-width: 768px) {
         grid-column: 1 / -1;
         text-align: left;
       }
@@ -59,14 +59,14 @@ const StyledProject = styled.li`
     .project-tech-list {
       justify-content: flex-end;
 
-      @media (max-width: 900px) {
+      @media (max-width: 768px) {
         justify-content: flex-start;
       }
 
       li {
         margin: 0 0 5px 20px;
 
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
           margin: 0 10px 5px 0;
         }
       }
@@ -76,7 +76,7 @@ const StyledProject = styled.li`
       margin-left: 0;
       margin-right: -10px;
 
-      @media (max-width: 900px) {
+      @media (max-width: 768px) {
         justify-content: flex-start;
         margin-left: -10px;
         margin-right: 0;
@@ -97,7 +97,7 @@ const StyledProject = styled.li`
       grid-column: 1 / 9;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -120,11 +120,11 @@ const StyledProject = styled.li`
     color: var(--lightest-slate);
     font-size: clamp(24px, 10vw, 38px);
 
-    @media (min-width: 900px) {
+    @media (min-width: 768px) {
       margin: 0 0 20px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       color: var(--white);
 
       a {
@@ -154,7 +154,7 @@ const StyledProject = styled.li`
     color: var(--light-slate);
     font-size: var(--fz-lg);
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
       box-shadow: none;
@@ -191,7 +191,7 @@ const StyledProject = styled.li`
       white-space: nowrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       margin: 10px 0;
 
       li {
@@ -296,6 +296,10 @@ const StyledModalHeader = styled.header`
     @media (max-width: 768px) {
       font-size: var(--fz-lg);
     }
+
+    @media (max-width: 425px) {
+      font-size: var(--fz-sm);
+    }
   }
 
   .modal-subtitle {
@@ -306,11 +310,15 @@ const StyledModalHeader = styled.header`
     margin: 0 20px 5px 0;
     color: var(--green);
     font-family: var(--font-mono);
-    font-size: var(--fz-xs);
+    font-size: var(--fz-sm);
     white-space: nowrap;
 
     @media (max-width: 768px) {
       font-size: var(--fz-xs);
+    }
+
+    @media (max-width: 425px) {
+      font-size: var(--fz-xxs);
     }
   }
 
@@ -335,13 +343,17 @@ const StyledModalHeader = styled.header`
     margin: 0 20px 5px 0;
     color: var(--green);
     font-family: var(--font-mono);
-    font-size: var(--fz-xs);
+    font-size: var(--fz-md);
     white-space: nowrap;
     justify-content: center;
 
     @media (max-width: 768px) {
       margin: 0 10px 5px 0;
-      font-size: var(--fz-md);
+      font-size: var(--fz-sm);
+    }
+
+    @media (max-width: 425px) {
+      font-size: var(--fz-xs);
     }
   }
 
@@ -359,7 +371,7 @@ const StyledModalHeader = styled.header`
       margin: 0 20px 5px 0;
       color: var(--green);
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+      font-size: var(--fz-md);
       white-space: nowrap;
     }
 
@@ -369,7 +381,17 @@ const StyledModalHeader = styled.header`
       li {
         margin: 0 10px 5px 0;
         color: var(--green);
-        font-size: var(--fz-md);
+        font-size: var(--fz-sm);
+      }
+    }
+
+    @media (max-width: 425px) {
+      margin: 5px 0;
+
+      li {
+        margin: 0 5px 0 0;
+        color: var(--green);
+        font-size: var(--fz-xs);
       }
     }
   }
@@ -398,9 +420,14 @@ const StyledModalContent = styled.div`
     margin-bottom: 1em;
     line-height: 1.5;
     color: var(--light-slate);
+    font-size: var(--fz-lg);
 
     @media (max-width: 768px) {
-      font-size: var(--fz-lg);
+      font-size: var(--fz-md);
+    }
+
+    @media (max-width: 425) {
+      font-size: var(--fz-sm);
     }
   }
 

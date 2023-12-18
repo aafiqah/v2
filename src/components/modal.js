@@ -45,17 +45,37 @@ const StyledNav = styled.div`
     @media (max-width: 768px) {
       padding: 15px;
     }
+
+    @media (max-width: 425px) {
+      padding: 10px;
+    }
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: var(--fz-md);
     color: var(--green);
     margin-right: 20px;
     font-family: var(--font-mono);
 
     @media (max-width: 768px) {
       padding: 15px;
+      font-size: var(--fz-sm);
+    }
+
+    @media (max-width: 425px) {
+      padding: 10px;
+      font-size: var(--fz-xs);
+    }
+  }
+
+  .button-close {
+    @media (max-width: 768px) {
+      padding: 15px;
       font-size: var(--fz-lg);
+    }
+
+    @media (max-width: 425px) {
+      padding: 10px;
     }
   }
 
@@ -100,9 +120,11 @@ const Modal = ({ onClose, children }) => {
         <StyledNav>
           <div className="navbar">
             <p>View Project</p>
-            <button className="close-button" onClick={onClose}>
-              X
-            </button>
+            <div className="button-close">
+              <button className="close-button" onClick={onClose}>
+                X
+              </button>
+            </div>
           </div>
         </StyledNav>
         <StyledModal>

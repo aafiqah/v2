@@ -10,42 +10,37 @@ const StyledAboutSection = styled.section`
 
   .inner {
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 3fr 1.5fr;
     grid-gap: 50px;
-    text-align: justify;
 
-    @media (max-width: 768px) {
+    @media (max-width: 980px) {
       display: block;
     }
   }
 `;
 
 const StyledText = styled.div`
-  ul.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
-    padding: 0;
-    margin: 20px 0 0 0;
-    overflow: hidden;
-    list-style: none;
+  height: auto;
+  display: flex;
+  align-items: center;
 
-    li {
-      position: relative;
-      margin-bottom: 10px;
-      padding-left: 20px;
-      font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+  font-size: var(--fz-xxl);
+  text-align: justify;
 
-      &:before {
-        content: '▹';
-        position: absolute;
-        left: 0;
-        color: var(--green);
-        font-size: var(--fz-sm);
-        line-height: 12px;
-      }
-    }
+  @media (max-width: 1060px) {
+    font-size: var(--fz-xl);
+  }
+
+  @media (max-width: 980px) {
+    font-size: var(--fz-lg);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--fz-xl);
+  }
+
+  @media (max-width: 425px) {
+    font-size: var(--fz-md);
   }
 `;
 
@@ -53,28 +48,29 @@ const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 980px) {
     margin: 50px auto;
     width: 80%;
   }
 
+  @media (max-width: 768px) {
+    margin: 40px auto;
+    width: 60%;
+  }
+
+  @media (max-width: 425px) {
+    margin: 30px auto;
+    width: 40%;
+  }
+
   .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
     display: block;
     position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
     background-color: var(--green);
+    border-radius: 50px;
 
     &:hover,
     &:focus {
-      outline: 0;
-      transform: translate(-4px, -4px);
-
-      &:after {
-        transform: translate(8px, 8px);
-      }
-
       .img {
         filter: none;
         mix-blend-mode: normal;
@@ -83,35 +79,45 @@ const StyledPic = styled.div`
 
     .img {
       position: relative;
-      border-radius: var(--border-radius);
+      border-radius: 50px;
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
+  }
+`;
 
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
+const StyledSkill = styled.div`
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    margin: 60px 0 0;
+    font-size: var(--fz-xxl);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+
+  .badge-item {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 10px;
+
+    .badge-image {
       width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--darkpurple);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
+      height: auto;
     }
   }
 `;
@@ -128,17 +134,46 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = [
-    'Java',
-    'Android Studio',
-    'Dart',
-    'Flutter',
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'Node.js',
-    'Git',
-    'Figma',
+  const skillsWithBadges = [
+    {
+      badge:
+        'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white',
+    },
+    {
+      badge: 'https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white',
+    },
+    {
+      badge:
+        'https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white',
+    },
   ];
 
   return (
@@ -146,19 +181,6 @@ const About = () => {
       <h2 className="numbered-heading">About Me</h2>
 
       <div className="inner">
-        <StyledPic>
-          <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/me.jpg"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
-          </div>
-        </StyledPic>
-
         <StyledText>
           <div>
             <p>
@@ -172,14 +194,33 @@ const About = () => {
               Beyond coding, I enjoy exploring new places, capturing moments through photography,
               and expressing my creativity through video editing.
             </p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
-
-          <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
         </StyledText>
+
+        <StyledPic>
+          <div className="wrapper">
+            <StaticImage
+              className="img"
+              src="../../images/me.jpg"
+              width={500}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
+          </div>
+        </StyledPic>
       </div>
+
+      <StyledSkill>
+        <h1>Here are a few technologies I've been working with recently</h1>
+        <div className="container">
+          {skillsWithBadges.map((skill, i) => (
+            <div key={i} className="badge-item">
+              <img src={skill.badge} alt={`${skill.name} badge`} className="badge-image" />
+            </div>
+          ))}
+        </div>
+      </StyledSkill>
     </StyledAboutSection>
   );
 };
