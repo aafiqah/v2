@@ -6,8 +6,6 @@ import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
-  max-width: 900px;
-
   .inner {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
@@ -26,10 +24,6 @@ const StyledText = styled.div`
 
   font-size: var(--fz-xxl);
   text-align: justify;
-
-  @media (max-width: 1060px) {
-    font-size: var(--fz-xl);
-  }
 
   @media (max-width: 980px) {
     font-size: var(--fz-lg);
@@ -61,7 +55,6 @@ const StyledPic = styled.div`
   .wrapper {
     display: block;
     position: relative;
-    background-color: var(--green);
     border-radius: 50px;
 
     &:hover,
@@ -76,7 +69,6 @@ const StyledPic = styled.div`
       position: relative;
       border-radius: 50px;
       mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
   }
@@ -96,14 +88,7 @@ const StyledSkill = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-      padding: 2px;
-    }
-
-    @media (max-width: 425px) {
-      padding: 2px;
-    }
+    padding: 2px;
   }
 
   .badge-item {

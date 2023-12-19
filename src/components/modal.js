@@ -43,7 +43,7 @@ const StyledNav = styled.div`
     border-bottom: 2px solid var(--green);
 
     @media (max-width: 768px) {
-      padding: 15px;
+      padding: 5px 15px;
     }
 
     @media (max-width: 425px) {

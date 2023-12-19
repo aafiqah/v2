@@ -22,37 +22,43 @@ const StyledProject = styled.li`
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   align-items: center;
 
-  @media (max-width: 768px) {
-    ${({ theme }) => theme.mixins.boxShadow};
-    background-color: var(--lightpurple);
-    display: flex;
-    flex-direction: column;
-    grid-column: 1 / -1;
-    z-index: 5;
-    justify-content: flex-start;
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 
   &:not(:last-of-type) {
     margin-bottom: 70px;
 
     @media (max-width: 768px) {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 425px) {
+      margin-bottom: 20px;
     }
   }
 
   &:nth-of-type(odd) {
     .project-content {
-      grid-column: 7 / -1;
+      grid-column: 8 / -1;
       text-align: right;
 
-      @media (max-width: 1080px) {
-        grid-column: 5 / -1;
-      }
       @media (max-width: 768px) {
-        grid-column: 1 / -1;
         text-align: left;
+        grid-row: 5 / -1;
+        grid-column: 1 / -1;
+        padding: 10px 20px;
+      }
+
+      @media (max-width: 425px) {
+        text-align: left;
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
+        padding: 10px 20px;
       }
     }
 
@@ -60,17 +66,18 @@ const StyledProject = styled.li`
       justify-content: flex-end;
 
       @media (max-width: 768px) {
-        justify-content: flex-start;
+        display: none;
       }
 
       li {
         margin: 0 0 5px 20px;
 
         @media (max-width: 768px) {
-          margin: 0 10px 5px 0;
+          display: none;
         }
       }
     }
+
     .project-links {
       justify-content: flex-end;
       margin-left: 0;
@@ -78,33 +85,42 @@ const StyledProject = styled.li`
 
       @media (max-width: 768px) {
         justify-content: flex-start;
-        margin-left: -10px;
+        margin-left: 0;
         margin-right: 0;
       }
     }
 
     .project-image {
       grid-column: 1 / 8;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+      }
     }
   }
 
   .project-content {
     position: relative;
-    grid-column: 1 / 7;
+    grid-column: 1 / 6;
     grid-row: 1 / -1;
-
-    @media (max-width: 1080px) {
-      grid-column: 1 / 9;
-    }
 
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       height: 100%;
-      grid-column: 1 / -1;
-      padding: 10px 25px;
       z-index: 5;
+
+      grid-row: 5 / -1;
+      grid-column: 1 / -1;
+      padding: 10px 20px;
+    }
+
+    @media (max-width: 425px) {
+      text-align: left;
+      grid-row: 3 / -1;
+      grid-column: 1 / -1;
+      padding: 10px 20px;
     }
   }
 
@@ -114,22 +130,29 @@ const StyledProject = styled.li`
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
+
+    @media (max-width: 980px) {
+      font-size: var(--fz-xxs);
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .project-title {
     color: var(--lightest-slate);
-    font-size: clamp(24px, 10vw, 38px);
+    font-size: var(--fz-heading);
 
-    @media (min-width: 768px) {
-      margin: 0 0 20px;
+    @media (max-width: 980px) {
+      font-size: 26px;
     }
 
     @media (max-width: 768px) {
       color: var(--white);
-
+      font-size: 26px;
       a {
         position: static;
-
         &:before {
           content: '';
           display: block;
@@ -154,14 +177,13 @@ const StyledProject = styled.li`
     color: var(--light-slate);
     font-size: var(--fz-lg);
 
-    @media (max-width: 768px) {
-      padding: 20px 0;
-      background-color: transparent;
-      box-shadow: none;
+    @media (max-width: 980px) {
+      font-size: var(--fz-md);
+      padding: 15px;
+    }
 
-      &:hover {
-        box-shadow: none;
-      }
+    @media (max-width: 768px) {
+      display: none;
     }
 
     a {
@@ -179,7 +201,7 @@ const StyledProject = styled.li`
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
-    margin: 25px 0 10px;
+    margin: 15px 0 10px;
     padding: 0;
     list-style: none;
 
@@ -189,15 +211,14 @@ const StyledProject = styled.li`
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
+
+      @media (max-width: 980px) {
+        font-size: var(--fz-xxs);
+      }
     }
 
     @media (max-width: 768px) {
-      margin: 10px 0;
-
-      li {
-        margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
-      }
+      display: none;
     }
   }
 
@@ -205,8 +226,6 @@ const StyledProject = styled.li`
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 10px;
-    margin-left: -10px;
     color: var(--lightest-slate);
 
     a {
@@ -225,10 +244,14 @@ const StyledProject = styled.li`
         width: 20px;
         height: 20px;
       }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
+
     .full-project-view-link {
       ${({ theme }) => theme.mixins.smallButton};
-      margin: 10px;
     }
   }
 
@@ -239,24 +262,17 @@ const StyledProject = styled.li`
     position: relative;
     z-index: 1;
 
+    @media (max-width: 768px) {
+      grid-column: 1 / -1;
+      height: 100%;
+      opacity: 0.5; // Initial opacity set to 50%
+    }
+
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
-
-      &:hover,
-      &:focus {
-        background: transparent;
-        outline: 0;
-
-        &:before,
-        .img {
-          background: transparent;
-          filter: none;
-        }
-      }
 
       &:before {
         content: '';
@@ -272,18 +288,36 @@ const StyledProject = styled.li`
         background-color: var(--darkpurple);
         mix-blend-mode: screen;
       }
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        outline: 0;
+
+        &:before,
+        .img {
+          background: transparent;
+          filter: none;
+        }
+      }
     }
 
     .img {
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);
+
+      @media (max-width: 768px) {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+        filter: grayscale(100%) contrast(1) brightness(50%);
+      }
     }
   }
 `;
 
 const StyledModalContainer = styled.main`
-  max-width: 1000px;
   padding: 20px;
 `;
 
@@ -294,11 +328,11 @@ const StyledModalHeader = styled.header`
     font-family: var(--font-mono);
 
     @media (max-width: 768px) {
-      font-size: var(--fz-lg);
+      font-size: var(--fz-xl);
     }
 
     @media (max-width: 425px) {
-      font-size: var(--fz-sm);
+      font-size: var(--fz-lg);
     }
   }
 
@@ -312,10 +346,6 @@ const StyledModalHeader = styled.header`
     font-family: var(--font-mono);
     font-size: var(--fz-sm);
     white-space: nowrap;
-
-    @media (max-width: 768px) {
-      font-size: var(--fz-xs);
-    }
 
     @media (max-width: 425px) {
       font-size: var(--fz-xxs);
@@ -349,11 +379,11 @@ const StyledModalHeader = styled.header`
 
     @media (max-width: 768px) {
       margin: 0 10px 5px 0;
-      font-size: var(--fz-sm);
+      font-size: var(--fz-md);
     }
 
     @media (max-width: 425px) {
-      font-size: var(--fz-xs);
+      font-size: var(--fz-sm);
     }
   }
 
@@ -381,7 +411,7 @@ const StyledModalHeader = styled.header`
       li {
         margin: 0 10px 5px 0;
         color: var(--green);
-        font-size: var(--fz-sm);
+        font-size: var(--fz-md);
       }
     }
 
@@ -391,7 +421,7 @@ const StyledModalHeader = styled.header`
       li {
         margin: 0 5px 0 0;
         color: var(--green);
-        font-size: var(--fz-xs);
+        font-size: var(--fz-sm);
       }
     }
   }
@@ -423,11 +453,11 @@ const StyledModalContent = styled.div`
     font-size: var(--fz-lg);
 
     @media (max-width: 768px) {
-      font-size: var(--fz-md);
+      font-size: var(--fz-lg);
     }
 
     @media (max-width: 425) {
-      font-size: var(--fz-sm);
+      font-size: var(--fz-md);
     }
   }
 
@@ -612,12 +642,6 @@ const Featured = () => {
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
-                <div className="project-image">
-                  <a href={external}>
-                    <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
-                </div>
-
                 <div className="project-content">
                   <div>
                     <p className="project-overline">Featured Project</p>
@@ -658,7 +682,7 @@ const Featured = () => {
                             html,
                           })
                         }>
-                        More Details
+                        Read More
                       </button>
 
                       {github && (
@@ -698,6 +722,12 @@ const Featured = () => {
                       )}
                     </div>
                   </div>
+                </div>
+
+                <div className="project-image">
+                  <a href={external}>
+                    <GatsbyImage image={image} alt={title} className="img" />
+                  </a>
                 </div>
               </StyledProject>
             );
