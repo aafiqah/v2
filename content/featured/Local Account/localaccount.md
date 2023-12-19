@@ -7,9 +7,22 @@ category: 'Desktop App Development'
 cover: './localacc.jpg'
 tech:
   - Java
-  - MySQL
-  - NetBeans
-  - PhpMyAdmin
+  - Netbeans
+  - phpMyAdmin
 ---
 
 My freelance project which develop a local account system (to know real-time of net profit, views cash flow, save supplier’s data, and generate reports that can be sent to the HQ department).
+
+# Technolgies
+
+<div class="container">
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/phpMyAdmin-4479A1?style=for-the-badge&logo=phpmyadmin&logoColor=white" alt="phpMyAdmin" class="badge-image" />
+  </div>
+</div>

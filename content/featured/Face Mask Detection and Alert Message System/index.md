@@ -10,8 +10,8 @@ exe: 'https://drive.google.com/file/d/1PpcMZZpGd4cboIzaCSE2zDD88L3bjVUX/view?usp
 youtube: 'https://www.youtube.com/embed/cEa_2xrp7Aw'
 tech:
   - Python
-  - PyCharm
-  - Qt5
+  - Pycharm
+  - QT5
   - Tensorflow
 ---
 
@@ -21,4 +21,21 @@ Face Mask Detection is a desktop application built with Python and using Tensorf
 
 <div style="text-align: center;">
   <iframe width="700" height="400" src="https://www.youtube.com/embed/cEa_2xrp7Aw" frameborder="0" allowfullscreen></iframe>
+</div>
+
+# Technolgies
+
+<div class="container">
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white" alt="Pycharm" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Qt%20Designer-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white" alt="QT5" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="Tensorflow" class="badge-image" />
+  </div>
 </div>

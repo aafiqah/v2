@@ -25,3 +25,20 @@ Medicine Halal or known as Advanced Medicine Halal Verification is a cross-platf
 <div style="text-align: center;">
   <iframe width="700" height="400" src="https://www.youtube.com/embed/mvzK-22mIq4" frameborder="0" allowfullscreen></iframe>
 </div>
+
+# Technolgies
+
+<div class="container">
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" alt="Firebase" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" class="badge-image" />
+  </div>
+</div>

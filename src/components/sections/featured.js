@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import sr from '@utils/sr';
@@ -8,8 +8,28 @@ import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 import { Modal } from '@components';
 
+const StyledFeaturedSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .project-link {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    &:after {
+      bottom: 0.1em;
+    }
+  }
+
+  .more-button {
+    ${({ theme }) => theme.mixins.button};
+    margin: 80px auto 0;
+  }
+`;
+
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
+  margin-top: 50px;
 
   a {
     position: relative;
@@ -252,6 +272,11 @@ const StyledProject = styled.li`
 
     .full-project-view-link {
       ${({ theme }) => theme.mixins.smallButton};
+
+      @media (max-width: 768px) {
+        padding: 0.5rem 0.75rem;
+        font-size: var(--fz-xxs);
+      }
     }
   }
 
@@ -265,7 +290,8 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.5; // Initial opacity set to 50%
+      max-height: auto;
+      opacity: 0.7; // Initial opacity set to 50%
     }
 
     a {
@@ -368,63 +394,6 @@ const StyledModalHeader = styled.header`
       margin: 15px 0 0;
     }
   }
-
-  .modal-tech-title {
-    margin: 0 20px 5px 0;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-md);
-    white-space: nowrap;
-    justify-content: center;
-
-    @media (max-width: 768px) {
-      margin: 0 10px 5px 0;
-      font-size: var(--fz-md);
-    }
-
-    @media (max-width: 425px) {
-      font-size: var(--fz-sm);
-    }
-  }
-
-  .modal-tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
-    margin: 25px 0 10px;
-    padding: 0;
-    justify-content: center;
-    list-style: none;
-
-    li {
-      margin: 0 20px 5px 0;
-      color: var(--green);
-      font-family: var(--font-mono);
-      font-size: var(--fz-md);
-      white-space: nowrap;
-    }
-
-    @media (max-width: 768px) {
-      margin: 10px 0;
-
-      li {
-        margin: 0 10px 5px 0;
-        color: var(--green);
-        font-size: var(--fz-md);
-      }
-    }
-
-    @media (max-width: 425px) {
-      margin: 5px 0;
-
-      li {
-        margin: 0 5px 0 0;
-        color: var(--green);
-        font-size: var(--fz-sm);
-      }
-    }
-  }
 `;
 
 const StyledModalContent = styled.div`
@@ -493,6 +462,43 @@ const StyledModalContent = styled.div`
       height: 300px;
     }
   }
+
+  div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2px;
+  }
+
+  div.badge-item {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 10px;
+
+    @media (max-width: 425px) {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      padding: 5px;
+      justify-content: center;
+    }
+
+    .badge-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0px;
+
+      @media (max-width: 425px) {
+        width: 85%;
+        height: auto;
+      }
+    }
+  }
 `;
 
 const StyledModalFooter = styled.footer`
@@ -549,7 +555,7 @@ const Featured = () => {
     {
       featured: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/featured/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___date], order: ASC }
       ) {
         edges {
           node {
@@ -579,12 +585,13 @@ const Featured = () => {
     }
   `);
 
-  const featuredProjects = data.featured.edges.filter(({ node }) => node);
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState(null);
+  const revealProjectLink = useRef(null);
+  const [showMore, setShowMore] = useState(false);
 
   // Function to open the modal
   const openModal = projectData => {
@@ -610,18 +617,28 @@ const Featured = () => {
     }
 
     sr.reveal(revealTitle.current, srConfig());
+    sr.reveal(revealProjectLink.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
+  const GRID_LIMIT = 4;
+  const featuredProjects = data.featured.edges.filter(({ node }) => node);
+  const firstSix = featuredProjects.slice(0, GRID_LIMIT);
+  const featuredToShow = showMore ? featuredProjects : firstSix;
+
   return (
-    <section id="projects">
+    <StyledFeaturedSection id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
         Some Things I’ve Built
       </h2>
 
+      <Link className="inline-link project-link" to="/list-projects" ref={revealProjectLink}>
+        ✨ A collection of projects ✨
+      </Link>
+
       <StyledProjectsGrid>
-        {featuredProjects &&
-          featuredProjects.map(({ node }, i) => {
+        {featuredToShow &&
+          featuredToShow.map(({ node }, i) => {
             const { frontmatter, html } = node;
             const {
               external,
@@ -734,6 +751,10 @@ const Featured = () => {
           })}
       </StyledProjectsGrid>
 
+      <button className="more-button" onClick={() => setShowMore(!showMore)}>
+        Show {showMore ? 'Less' : 'More'}
+      </button>
+
       {isModalOpen && modalData && modalData.frontmatter && (
         <Modal onClose={closeModal}>
           <StyledModalContainer>
@@ -760,13 +781,6 @@ const Featured = () => {
                   <GatsbyImage image={getImage(modalData.cover)} alt={modalData.title} />
                 </a>
               </div>
-
-              <ul className="modal-tech-list">
-                <p className="modal-tech-title">Technologies:</p>
-                {modalData.tech.map((tech, i) => (
-                  <li key={i}>{tech}</li>
-                ))}
-              </ul>
             </StyledModalHeader>
 
             <StyledModalContent dangerouslySetInnerHTML={{ __html: modalData.html }} />
@@ -804,7 +818,7 @@ const Featured = () => {
           </StyledModalContainer>
         </Modal>
       )}
-    </section>
+    </StyledFeaturedSection>
   );
 };
 
