@@ -23,7 +23,7 @@ Face Mask Detection is a desktop application built with Python and using Tensorf
   <iframe width="700" height="400" src="https://www.youtube.com/embed/cEa_2xrp7Aw" frameborder="0" allowfullscreen></iframe>
 </div>
 
-# Technolgies
+# Technologies Used
 
 <div class="container">
   <div class="badge-item">

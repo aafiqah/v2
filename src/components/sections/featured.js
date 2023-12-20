@@ -415,36 +415,8 @@ const StyledModalContent = styled.div`
     }
   }
 
-  p {
-    margin-bottom: 1em;
-    line-height: 1.5;
-    color: var(--light-slate);
-    font-size: var(--fz-lg);
-
-    @media (max-width: 768px) {
-      font-size: var(--fz-lg);
-    }
-
-    @media (max-width: 425) {
-      font-size: var(--fz-md);
-    }
-  }
-
   a {
     ${({ theme }) => theme.mixins.inlineLink};
-  }
-
-  code {
-    background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
-    border-radius: var(--border-radius);
-    font-size: var(--fz-sm);
-    padding: 0.2em 0.4em;
-  }
-
-  pre code {
-    background-color: transparent;
-    padding: 0;
   }
 
   img {
@@ -460,6 +432,95 @@ const StyledModalContent = styled.div`
     iframe {
       width: 100%;
       height: 300px;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    color: var(--light-slate);
+    font-size: var(--fz-lg);
+    margin: 5px 0;
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-lg);
+    }
+
+    @media (max-width: 425) {
+      font-size: var(--fz-md);
+    }
+  }
+
+  ul {
+    margin: 5px 0;
+  }
+
+  li {
+    color: var(--light-slate);
+    font-size: var(--fz-lg);
+    text-align: justify;
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-lg);
+    }
+
+    @media (max-width: 425) {
+      font-size: var(--fz-md);
+    }
+  }
+
+  code {
+    background-color: var(--lightest-navy);
+    color: var(--lightest-slate);
+    border-radius: var(--border-radius);
+    font-size: var(--fz-sm);
+    padding: 0.2em 0.4em;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  div.modal-content-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-gap: 25px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    .modal-content-text {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 980px) {
+        font-size: var(--fz-lg);
+      }
+
+      @media (max-width: 768px) {
+        font-size: var(--fz-xl);
+      }
+
+      @media (max-width: 425px) {
+        font-size: var(--fz-md);
+      }
+    }
+
+    .modal-content-img {
+      position: relative;
+      max-width: 500px;
+
+      @media (max-width: 980px) {
+        margin: 50px auto;
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        margin: 40px auto;
+        width: 60%;
+      }
     }
   }
 
@@ -555,7 +616,7 @@ const Featured = () => {
     {
       featured: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/content/featured/" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
           node {
@@ -565,6 +626,7 @@ const Featured = () => {
               title
               slug
               category
+              company
               cover {
                 childImageSharp {
                   gatsbyImageData(width: 1080, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -661,7 +723,7 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">{category}</p>
 
                     <h3 className="project-title">
                       <a href={external}>{fulltitle}</a>

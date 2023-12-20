@@ -12,9 +12,32 @@ tech:
   - PhpMyAdmin
 ---
 
-Class attendance is a system that helps institutions manage student attendance leads to taking students’ attendance using face recognition techniques. Also, this system provides a sending notification of students’ attendance to their guardians through WhatsApp. Successfully designed and executed a class attendance system as a solo project in 4 months for a Diploma final year project (fyp)
+<div class="modal-content-container">
+  <div class="modal-content-text">
 
-# Technolgies
+Class attendance is a system that helps institutions manage student attendance leads to taking students’ attendance using face recognition techniques. Also, this system provides a sending notification of students’ attendance to their guardians through WhatsApp. Successfully designed and executed a class attendance system as a solo project in 4 months for a Diploma final year project (fyp).
+
+Limitation :
+
+- The system only detects a face from a limited distance.
+- The system cannot recognize multiple faces.
+- The system cannot mark automatically when recognizing a student’s face.
+
+Challenges Faced :
+
+- Choosing suitable software and hardware to design a face recognition attendance system
+- Types of database storage to keep student attendance data
+- Identifying a suitable server for huge capacity storage.
+  </div>
+
+  <div class="modal-content-img">
+
+![Diagram](./diagram.png)
+
+  </div>
+</div>
+
+# Technologies Used
 
 <div class="container">
   <div class="badge-item">

@@ -16,7 +16,7 @@ My fourth UI/UX design project involves creating a mobile application centered a
 
 This passion project aims to provide users with a comprehensive tool for cultivating and tracking healthy habits over time.
 
-# Technolgies
+# Technologies Used
 
 <div class="container">
   <div class="badge-item">

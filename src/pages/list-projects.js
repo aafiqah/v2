@@ -93,7 +93,12 @@ const StyledTableContainer = styled.div`
 
       &.category {
         font-size: var(--fz-lg);
-        white-space: nowrap;
+        white-space: wrap;
+      }
+
+      &.company {
+        font-size: var(--fz-lg);
+        white-space: wrap;
       }
 
       &.tech {
@@ -168,6 +173,7 @@ const ListProjectsPage = ({ location, data }) => {
                 <th>Title</th>
                 <th>Category</th>
                 <th className="hide-on-mobile">Built with</th>
+                <th className="hide-on-mobile">Built at</th>
                 <th>Link</th>
               </tr>
             </thead>
@@ -180,6 +186,7 @@ const ListProjectsPage = ({ location, data }) => {
                     title,
                     tech,
                     category,
+                    company,
                     github,
                     android,
                     figma,
@@ -197,13 +204,17 @@ const ListProjectsPage = ({ location, data }) => {
 
                       <td className="tech hide-on-mobile">
                         {tech?.length > 0 &&
-                          tech.map(({ name }, i) => (
+                          tech.map((item, i) => (
                             <span key={i}>
-                              {name}
+                              {item}
                               {''}
                               {i !== tech.length - 1 && <span className="separator">&middot;</span>}
                             </span>
                           ))}
+                      </td>
+
+                      <td className="company hide-on-mobile">
+                        {company ? <span>{company}</span> : <span>—</span>}
                       </td>
 
                       <td className="links">
@@ -280,6 +291,7 @@ export const pageQuery = graphql`
             title
             slug
             category
+            company
             cover {
               childImageSharp {
                 gatsbyImageData(width: 1080, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
