@@ -182,15 +182,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! I'm Alessa, armed with a Bachelor’s in Computer Forensics, I made the exciting
-              decision to dive into a career as a Software Developer. Throughout my university
-              years, I embarked on several impactful projects, ranging from desktop to mobile
-              applications. I thrive on learning new technologies and channeling my creativity to
-              build incredible things.
+              🚀 Hello! I'm Alessa, armed with a Bachelor’s in Computer Forensics, and I've made the
+              thrilling decision to dive into a career as a Software Developer. 💻 Throughout my
+              university years, I embarked on several impactful projects, ranging from desktop 💻 to
+              mobile applications 📱. I thrive on learning new technologies and channeling my
+              creativity to build incredible things.
             </p>
             <p>
-              Beyond coding, I enjoy exploring new places, capturing moments through photography,
-              and expressing my creativity through video editing.
+              Beyond coding, I enjoy exploring new places 🌍, capturing moments through photography
+              📸, and expressing my creativity through video editing 🎥. Let's create something
+              amazing together! 🌟
             </p>
           </div>
         </StyledText>

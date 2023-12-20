@@ -15,7 +15,24 @@ tech:
   - Tensorflow
 ---
 
-Face Mask Detection is a desktop application built with Python and using Tensorflow machine learning. The objective is to identify if a person is wearing a mask or not by recognizing and detecting the presence of a face mask on the face. Also gives the percentage of people wearing a face mask and display an alert message if there is a presence or absence of a face mask. This system was created in 1 month in an agile team of 4 for a digital image processing subject
+<div class="modal-content-container">
+  <div class="modal-content-text">
+
+Face Mask Detection is a desktop application built with Python and using Tensorflow machine learning. This project was created in 1 month in an agile team of 4 for a digital image processing subject.
+
+Objective
+
+- To identify if a person is wearing a mask or not by recognizing and detecting the presence of a face mask on the face.
+- To gives the percentage of people wearing a face mask and display an alert message if there is a presence or absence of a face mask.
+
+  </div>
+
+  <div class="modal-content-img">
+
+![Main Page](./mainpage.jpg)
+
+  </div>
+</div>
 
 # Face Mask Detection Sestem Demo Video
 

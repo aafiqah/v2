@@ -28,6 +28,7 @@ Challenges Faced :
 - Choosing suitable software and hardware to design a face recognition attendance system
 - Types of database storage to keep student attendance data
 - Identifying a suitable server for huge capacity storage.
+
   </div>
 
   <div class="modal-content-img">
@@ -48,5 +49,8 @@ Challenges Faced :
   </div>
   <div class="badge-item">
     <img src="https://img.shields.io/badge/phpMyAdmin-4479A1?style=for-the-badge&logo=phpmyadmin&logoColor=white" alt="phpMyAdmin" class="badge-image" />
+  </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="badge-image" />
   </div>
 </div>

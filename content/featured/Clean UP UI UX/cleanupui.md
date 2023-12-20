@@ -11,9 +11,7 @@ tech:
   - Adobe XD
 ---
 
-My third UI/UX design for a mobile application related to beach clean-up activities.
-
-The goal of this passion project is to create a positive and impactful digital experience that encourages more people to participate in beach clean-up activities, fostering a sense of environmental responsibility and community engagement.
+My third UI/UX design for a mobile application related to beach clean-up activities. The goal of this passion project is to create a positive and impactful digital experience that encourages more people to participate in beach clean-up activities, fostering a sense of environmental responsibility and community engagement.
 
 # Technologies Used
 

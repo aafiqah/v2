@@ -483,7 +483,7 @@ const StyledModalContent = styled.div`
 
   div.modal-content-container {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-columns: 2fr 2fr;
     grid-gap: 25px;
 
     @media (max-width: 768px) {
@@ -494,6 +494,7 @@ const StyledModalContent = styled.div`
       height: auto;
       display: flex;
       flex-direction: column;
+      justify-content: center;
 
       @media (max-width: 980px) {
         font-size: var(--fz-lg);
@@ -509,8 +510,10 @@ const StyledModalContent = styled.div`
     }
 
     .modal-content-img {
-      position: relative;
-      max-width: 500px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       @media (max-width: 980px) {
         margin: 50px auto;
@@ -519,7 +522,7 @@ const StyledModalContent = styled.div`
 
       @media (max-width: 768px) {
         margin: 40px auto;
-        width: 60%;
+        width: 100%;
       }
     }
   }

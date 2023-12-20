@@ -4,7 +4,7 @@ fulltitle: 'Advanced Medicine Halal Verification App'
 title: 'Medicine Halal App'
 slug: 'medicine-halal-app'
 category: 'Android App Development'
-cover: './demo.png'
+cover: './medicine-halal-1.jpg'
 github: 'https://github.com/aafiqah/advanced_medicine_halal'
 apk: 'https://drive.google.com/file/d/1wBMtNKnuHmivdIKBGuZAuV6-Dz_YCaeE/view?usp=sharing'
 youtube: 'https://www.youtube.com/embed/mvzK-22mIq4'
@@ -16,9 +16,19 @@ tech:
   - Figma
 ---
 
+<div class="modal-content-container">
+  <div class="modal-content-text">
+
 Medicine Halal or known as Advanced Medicine Halal Verification is a cross-platform Android application that allows users to easily detect halal medicine, access registration status, and report any issues, fostering a safer and more transparent healthcare environment. This app was created solo in 9 months for a Bachelor final year project (fyp).
 
+  </div>
+
+  <div class="modal-content-img">
+
 ![How it work](./medicine-halal-2.jpg)
+
+  </div>
+</div>
 
 # Medicine Halal App Demo Video
 

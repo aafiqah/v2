@@ -12,9 +12,7 @@ tech:
   - Adobe Illustrator
 ---
 
-My fourth UI/UX design project involves creating a mobile application centered around fostering positive weekly habits.
-
-This passion project aims to provide users with a comprehensive tool for cultivating and tracking healthy habits over time.
+My fourth UI/UX design project involves creating a mobile application centered around fostering positive weekly habits. This passion project aims to provide users with a comprehensive tool for cultivating and tracking healthy habits over time.
 
 # Technologies Used
 
