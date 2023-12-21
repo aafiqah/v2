@@ -15,7 +15,14 @@ tech:
 <div class="modal-content-container">
   <div class="modal-content-text">
 
-Class attendance is a system that helps institutions manage student attendance leads to taking students’ attendance using face recognition techniques. Also, this system provides a sending notification of students’ attendance to their guardians through WhatsApp. Successfully designed and executed a class attendance system as a solo project in 4 months for a Diploma final year project (fyp).
+Class attendance is a system that helps institutions manage student attendance leads to taking students’ attendance using face recognition techniques. Successfully designed and executed a class attendance system as a solo project in 4 months for a Diploma final year project (fyp).
+
+Objective :
+
+1. To develop a student attendance system for class using face recognition techniques.
+2. To send notification of student’s attendance to guardian through WhatsApp.
+3. To automatically recognize student images within 5 seconds.
+4. To generate student attendance reports for each student.
 
 Limitation :
 

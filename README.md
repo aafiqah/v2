@@ -22,16 +22,22 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
+1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+
+   ```sh
+   nvm install
+   ```
+
+2. Install the Gatsby CLI
 
    ```sh
    npm install -g gatsby-cli
    ```
 
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+   or update Gatsby CLI
 
    ```sh
-   nvm install
+   npm i -g gatsby-cl
    ```
 
 3. Install dependencies
@@ -40,10 +46,16 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
    yarn
    ```
 
+   or
+
+   ```sh
+   npm install
+   ```
+
 4. Start the development server
 
    ```sh
-   npm start
+   gatsby develop
    ```
 
 ## 🚀 Building and Running for Production
@@ -54,7 +66,7 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
    npm run build
    ```
 
-1. Preview the site as it will appear once deployed
+2. Preview the site as it will appear once deployed
 
    ```sh
    npm run serve
