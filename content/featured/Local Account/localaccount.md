@@ -10,15 +10,10 @@ tech:
   - Java
   - Netbeans
   - phpMyAdmin
+  - MySQL
 ---
 
-My freelance project which develop a local account system.
-
-Objective
-
-- To know real-time of net profit
-- Views cash flow, save supplier’s data
-- Generate reports that can be sent to the HQ department.
+My freelance project which develop a local account system (to know real-time of net profit, views cash flow, save supplier’s data, and generate reports that can be sent to the HQ department)
 
 # Technologies Used
 

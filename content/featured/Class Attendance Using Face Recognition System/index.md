@@ -10,6 +10,7 @@ tech:
   - Java
   - NetBeans
   - PhpMyAdmin
+  - MySQL
 ---
 
 <div class="modal-content-container">
