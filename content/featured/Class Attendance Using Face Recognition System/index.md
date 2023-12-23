@@ -6,7 +6,7 @@ slug: 'face-recognition-system'
 category: 'Desktop App Development'
 cover: './demo.png'
 github: 'https://github.com/aafiqah/class_attendance'
-youtube: 'https://www.youtube.com/watch?v=uP9MlDTOUzs'
+youtube: 'https://www.youtube.com/embed/uP9MlDTOUzs'
 tech:
   - Java
   - NetBeans
@@ -52,7 +52,7 @@ In this project, we have three users responsible for the system. The staff and t
 # Class Attendance using Face Recognition Sestem Demo Video
 
 <div style="text-align: center;">
-  <iframe width="700" height="700" src="https://www.youtube.com/watch?v=uP9MlDTOUzs" frameborder="0" allowfullscreen></iframe>
+  <iframe width="700" height="700" src="https://www.youtube.com/embed/uP9MlDTOUzs" frameborder="0" allowfullscreen></iframe>
 </div>
 
 # Technologies Used

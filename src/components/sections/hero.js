@@ -66,7 +66,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        Aspiring software development with a background in computer forensics. Eager to apply
+        Aspiring software developer with a background in computer forensics. Eager to apply
         analytical skills to software development, learn continuously, and contribute to innovative
         projects.
       </p>
