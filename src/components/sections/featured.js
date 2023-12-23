@@ -425,7 +425,7 @@ const StyledModalContent = styled.div`
 
   iframe {
     width: 100%;
-    height: 400px;
+    height: 450px;
   }
 
   @media (max-width: 768px) {

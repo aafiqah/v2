@@ -38,7 +38,7 @@ Objective :
 # Face Mask Detection Sestem Demo Video
 
 <div style="text-align: center;">
-  <iframe width="700" height="400" src="https://www.youtube.com/embed/cEa_2xrp7Aw" frameborder="0" allowfullscreen></iframe>
+  <iframe width="700" height="700" src="https://www.youtube.com/embed/cEa_2xrp7Aw" frameborder="0" allowfullscreen></iframe>
 </div>
 
 # Technologies Used

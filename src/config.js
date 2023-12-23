@@ -12,7 +12,11 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/alessaafiqahjohar',
+      url: 'https://my.linkedin.com/in/alessaafiqahjohar',
+    },
+    {
+      name: 'Youtube',
+      url: 'https://www.youtube.com/@lezjoy8',
     },
     {
       name: 'Figma',

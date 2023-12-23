@@ -33,7 +33,7 @@ Medicine Halal or known as Advanced Medicine Halal Verification is a cross-platf
 # Medicine Halal App Demo Video
 
 <div style="text-align: center;">
-  <iframe width="700" height="400" src="https://www.youtube.com/embed/mvzK-22mIq4" frameborder="0" allowfullscreen></iframe>
+  <iframe width="700" height="700" src="https://www.youtube.com/embed/mvzK-22mIq4" frameborder="0" allowfullscreen></iframe>
 </div>
 
 # Technologies Used
