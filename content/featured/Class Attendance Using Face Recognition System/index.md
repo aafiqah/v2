@@ -18,8 +18,6 @@ tech:
 
 Class attendance is a system that helps institutions manage student attendance leads to taking students’ attendance using face recognition techniques. Successfully designed and executed a class attendance system as a solo project in 4 months for a Diploma final year project (fyp).
 
-In this project, we have three users responsible for the system. The staff and teacher who takes the attendance and admin who is responsible for managing students’ faces in the face’s database. Admin opens a camera to capture, collect and save images to database or a folder. After the collection and saving the process done, the training set manager start to extract faces from the image by face detection.
-
 Objective :
 
 1. To develop a student attendance system for class using face recognition techniques.
@@ -42,6 +40,8 @@ Challenges Faced :
   </div>
 
   <div class="modal-content-img">
+
+In this project, we have three users responsible for the system. The staff and teacher who takes the attendance and admin who is responsible for managing students’ faces in the face’s database. Admin opens a camera to capture, collect and save images to database or a folder. After the collection and saving the process done, the training set manager start to extract faces from the image by face detection.
 
 ![Diagram](./diagram.png)
 
