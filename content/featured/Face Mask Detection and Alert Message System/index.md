@@ -13,6 +13,7 @@ tech:
   - Pycharm
   - QT5
   - Tensorflow
+  - OpenCV
 ---
 
 <div class="modal-content-container">
@@ -56,4 +57,7 @@ Objective :
   <div class="badge-item">
     <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="Tensorflow" class="badge-image" />
   </div>
+  <div class="badge-item">
+    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" class="badge-image" />
+</div>
 </div>
