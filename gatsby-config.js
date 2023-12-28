@@ -2,7 +2,7 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Alessa Johar',
+    title: 'Alessa Afiqah Johar',
     description:
       'Alessa Johar is a mobile and software Developer who Eager to apply analytical skills to software development, learn continuously, and contribute to innovative projects.',
     siteUrl: 'https://alessajohar.com', // No trailing slash allowed!
