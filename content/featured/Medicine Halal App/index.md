@@ -1,5 +1,5 @@
 ---
-date: '2021-06-10'
+date: '2021-10-01'
 fulltitle: 'Advanced Medicine Halal Verification App'
 title: 'Medicine Halal App'
 slug: 'medicine-halal-app'

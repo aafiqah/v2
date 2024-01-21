@@ -1,5 +1,5 @@
 ---
-date: '2019-09-01'
+date: '2019-09-12'
 fulltitle: 'Class Attendance Using Face Recognition System'
 title: 'Face Recognition System'
 slug: 'face-recognition-system'

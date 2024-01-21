@@ -1,5 +1,5 @@
 ---
-date: '2023-08-5'
+date: '2023-08-01'
 fulltitle: '"Week Habit " - A UI/UX Design for a Tracker App'
 title: 'Week Habit UI/UX'
 slug: 'week-habit-ui-ux'

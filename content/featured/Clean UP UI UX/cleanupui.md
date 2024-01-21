@@ -1,5 +1,5 @@
 ---
-date: '2023-07-27'
+date: '2023-07-20'
 fulltitle: '"Clean Up" - A UI/UX Design for a Community App'
 title: 'Clean Up UI/UX'
 slug: 'clean-up-ui-ux'

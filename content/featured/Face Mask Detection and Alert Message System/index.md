@@ -1,5 +1,5 @@
 ---
-date: '2021-04-01'
+date: '2021-04-20'
 fulltitle: 'Face Mask Detection and Alert Message System'
 title: 'Face mask Detection'
 slug: 'face-mask-detection'
