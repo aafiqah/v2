@@ -178,7 +178,7 @@ const About = () => {
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
 
-      <div className="inner">
+      {/* <div className="inner"> */}
         <StyledText>
           <div>
             <p>
@@ -196,7 +196,7 @@ const About = () => {
           </div>
         </StyledText>
 
-        <StyledPic>
+        {/*<StyledPic>
           <div className="wrapper">
             <StaticImage
               className="img"
@@ -207,8 +207,8 @@ const About = () => {
               alt="Headshot"
             />
           </div>
-        </StyledPic>
-      </div>
+         </StyledPic> */}
+      {/* </div> */}
 
       <StyledSkill>
         <h1>Here are a few technologies I've been working with recently</h1>
